@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const Register=()=>import("../views/RegisterView.vue")
 const Login=()=>import("../views/LoginView.vue")
-const Alert=()=>import("../components/alert.vue")
+
 const Welcome=()=>import("../views/WelcomeView.vue")
 
 const router = createRouter({
@@ -18,12 +18,6 @@ const router = createRouter({
       path: '/register',
       name: 'register',
       component: Register
-    },
-
-    {
-      path: '/alert',
-      name: 'alert',
-      component: Alert
     },
 
     {
