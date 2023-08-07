@@ -22,13 +22,17 @@ function login() {
     return message.value = 'Please enter Email & Password in text box below';
   } else {
     let person = JSON.parse(localStorage.getItem('person'))
-    console.log(person.email)
-    if (logInPerson.email === person.email && logInPerson.password === person.password) {
-      router.push({name: 'welcome'})
-    } else {
-      worng.value = 'text-center text-3xl p-2 font-bold text-red-600'
-    }
+    if (person===null){
+      return message.value = `No Record Found with this email: ${logInPerson.email} and password: ${logInPerson.password} `;
+    }else {
+      if (person.email === logInPerson.email  && person.password === logInPerson.password ) {
+        router.push({name: 'welcome'})
 
+      } else {
+        worng.value = 'text-center text-3xl p-2 font-bold text-red-600'
+      }
+
+    }
   }
 }
 

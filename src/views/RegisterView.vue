@@ -48,10 +48,19 @@ function register() {
 
 
     <div class="container h-full px-6 py-24">
-      <div
-          class="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
+      <div class="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
         <!-- Left column container with background-->
         <div class="mb-12 md:mb-0 md:w-8/12 lg:w-6/12">
+          <div :class="showTwo">
+            <h1 class="text-center text-2xl p-2 font-bold text-red-600 right-5">{{ messageTwo }}</h1>
+            <RouterLink to="/"
+                        type="button" class="inline-block text-center w-1/4 rounded bg-blue-700 px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                        data-te-ripple-init
+                        data-te-ripple-color="light">
+              LogIn
+            </RouterLink>
+          </div>
+
           <img
               src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
               class="w-full"
@@ -59,18 +68,6 @@ function register() {
         </div>
 
         <!-- Right column container with form -->
-
-        <div :class="showTwo">
-          <h1 class="text-center text-2xl p-2 font-bold text-red-600">{{ messageTwo }}</h1>
-          <RouterLink to="/"
-                      type="button"
-                      class=" text-red-600  bg-blue-700 rounded border-2 border-danger bg-white px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:bg-red-800 hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                      data-te-ripple-init
-                      data-te-ripple-color="light">
-            LogIn
-          </RouterLink>
-        </div>
-
 
         <div :class="show">
           <!-- Name input -->
